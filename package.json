@@ -43,7 +43,11 @@
         }
       },
       "connectivity": true,
-      "destinations": true
+      "destinations": true,
+      "API_BUSINESS_PARTNER": {
+        "kind": "odata-v2",
+        "model": "srv/external/API_BUSINESS_PARTNER"
+      }
     },
     "lcap": true
   }

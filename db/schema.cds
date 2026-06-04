@@ -1,3 +1,4 @@
+namespace BP_API;
 
 using { cuid } from '@sap/cds/common';
 

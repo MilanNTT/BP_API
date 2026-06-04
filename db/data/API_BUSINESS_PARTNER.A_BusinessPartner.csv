@@ -1,0 +1,5 @@
+BusinessPartner,BusinessPartnerFullName,BusinessPartnerName,FirstName,LastName,BusinessPartnerCategory,OrganizationBPName1,Customer,Supplier,BirthDate,BusinessPartnerIsBlocked,CreationDate,LastChangeDate
+r-27545965,BusinessPartnerFullName-27545965,BusinessPartnerName-27545965,FirstName-27545965,LastName-27545965,5,OrganizationBPName1-27545965,r-27545965,r-27545965,2015-01-05,false,2010-05-10,2005-07-03
+r-27545966,BusinessPartnerFullName-27545966,BusinessPartnerName-27545966,FirstName-27545966,LastName-27545966,6,OrganizationBPName1-27545966,r-27545966,r-27545966,2017-09-12,true,2012-09-29,2016-06-28
+r-27545967,BusinessPartnerFullName-27545967,BusinessPartnerName-27545967,FirstName-27545967,LastName-27545967,7,OrganizationBPName1-27545967,r-27545967,r-27545967,2016-08-30,false,2021-12-09,2000-09-23
+r-27545968,BusinessPartnerFullName-27545968,BusinessPartnerName-27545968,FirstName-27545968,LastName-27545968,8,OrganizationBPName1-27545968,r-27545968,r-27545968,2015-08-06,true,2003-12-17,2021-06-27
