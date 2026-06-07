@@ -1,10 +1,11 @@
 namespace BP_API;
 
-using { cuid } from '@sap/cds/common';
+using {cuid} from '@sap/cds/common';
 
-entity Employee : cuid {
-    name : String(100);
-    surname: String(100);
-    email: String(100);
-    bornOn : Date;
+entity ProcessStep : cuid {
+    BusinessPartner : String(10);
+    user            : String(100);
+    action          : String(100);
+    comment         : String(100);
+    executed        : DateTime;
 }

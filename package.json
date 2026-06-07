@@ -17,15 +17,20 @@
   "devDependencies": {
     "@cap-js/sqlite": "^2.4",
     "@sap/cds-dk": "^9",
-    "@sap/dev-cap-tools": "^1.31.0"
+    "@sap/dev-cap-tools": "^1.31.0",
+    "cds-plugin-ui5": "^0.13.0",
+    "rimraf": "^5.0.5",
+    "mbt": "^1.2.29"
   },
   "scripts": {
     "start": "cds-serve",
     "start-local": "npm run generate-entry-point && npm run cds-watch",
     "generate-entry-point": "dev-cap-tools gen-entrypoint",
     "cds-watch": "cds watch --open",
-    "build": "mbt build -t gen --mtar mta.tar",
-    "deploy": "cf deploy gen/mta.tar"
+    "build": "rimraf resources mta_archives && mbt build --mtar archive",
+    "deploy": "cf deploy mta_archives/archive.mtar --retries 1",
+    "watch-businesspartnerrequest": "cds watch --open bp.businesspartnerrequest/index.html?sap-ui-xx-viewCache=false --livereload false",
+    "undeploy": "cf undeploy BP_API --delete-services --delete-service-keys --delete-service-brokers"
   },
   "private": true,
   "cds": {
@@ -50,5 +55,11 @@
       }
     },
     "lcap": true
-  }
+  },
+  "workspaces": [
+    "app/*"
+  ],
+  "sapux": [
+    "app/businesspartnerrequest"
+  ]
 }
