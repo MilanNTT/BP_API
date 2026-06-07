@@ -1,5 +1,6 @@
 BusinessPartner,BusinessPartnerFullName,BusinessPartnerName,FirstName,LastName,BusinessPartnerCategory,OrganizationBPName1,Customer,Supplier,BirthDate,BusinessPartnerIsBlocked,CreationDate,LastChangeDate
-r-27545965,BusinessPartnerFullName-27545965,BusinessPartnerName-27545965,FirstName-27545965,LastName-27545965,5,OrganizationBPName1-27545965,r-27545965,r-27545965,2015-01-05,false,2010-05-10,2005-07-03
-r-27545966,BusinessPartnerFullName-27545966,BusinessPartnerName-27545966,FirstName-27545966,LastName-27545966,6,OrganizationBPName1-27545966,r-27545966,r-27545966,2017-09-12,true,2012-09-29,2016-06-28
-r-27545967,BusinessPartnerFullName-27545967,BusinessPartnerName-27545967,FirstName-27545967,LastName-27545967,7,OrganizationBPName1-27545967,r-27545967,r-27545967,2016-08-30,false,2021-12-09,2000-09-23
-r-27545968,BusinessPartnerFullName-27545968,BusinessPartnerName-27545968,FirstName-27545968,LastName-27545968,8,OrganizationBPName1-27545968,r-27545968,r-27545968,2015-08-06,true,2003-12-17,2021-06-27
+4,Alice Johnson,Johnson,Alice,Johnson,1,,C000001,,1985-03-15,false,2010-01-10,2020-05-01
+1011,Bob Smith,Smith,Bob,Smith,1,,C000002,,1990-07-22,false,2011-03-15,2021-06-10
+1820,Tech Corp GmbH,Tech Corp,,,2,Tech Corp GmbH,C000003,,,false,2012-06-20,2022-01-15
+304946,Emma Williams,Williams,Emma,Williams,1,,C000004,,1988-11-30,false,2013-09-05,2023-03-20
+998877,Global Supplies AG,Global Supplies,,,2,Global Supplies AG,,S000001,,true,2014-12-01,2024-07-01

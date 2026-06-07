@@ -67,69 +67,75 @@ annotate service.BusinessPartner with @(
 );
 
 annotate service.ProcessStep with @(
-    UI.FieldGroup #GeneratedGroup : {
-        $Type : 'UI.FieldGroupType',
-        Data : [
-            {
-                $Type : 'UI.DataField',
-                Label : 'BusinessPartner',
-                Value : BusinessPartner,
-            },
-            {
-                $Type : 'UI.DataField',
-                Label : 'user',
-                Value : user,
-            },
-            {
-                $Type : 'UI.DataField',
-                Label : 'action',
-                Value : action,
-            },
-            {
-                $Type : 'UI.DataField',
-                Label : 'comment',
-                Value : comment,
-            },
-            {
-                $Type : 'UI.DataField',
-                Label : 'executed',
-                Value : executed,
-            },
-        ],
+    UI.HeaderInfo : {
+        TypeName       : 'Process Step',
+        TypeNamePlural : 'Process Steps',
+        Title          : { $Type : 'UI.DataField', Value : action },
+        Description    : { $Type : 'UI.DataField', Value : BusinessPartner },
     },
-    UI.Facets : [
-        {
-            $Type : 'UI.ReferenceFacet',
-            ID : 'GeneratedFacet1',
-            Label : 'General Information',
-            Target : '@UI.FieldGroup#GeneratedGroup',
-        },
-    ],
     UI.LineItem : [
         {
             $Type : 'UI.DataField',
-            Label : 'BusinessPartner',
+            Label : 'Business Partner',
             Value : BusinessPartner,
         },
         {
             $Type : 'UI.DataField',
-            Label : 'user',
+            Label : 'User',
             Value : user,
         },
         {
             $Type : 'UI.DataField',
-            Label : 'action',
+            Label : 'Action',
             Value : action,
         },
         {
             $Type : 'UI.DataField',
-            Label : 'comment',
+            Label : 'Comment',
             Value : comment,
         },
         {
             $Type : 'UI.DataField',
-            Label : 'executed',
+            Label : 'Executed',
             Value : executed,
+        },
+    ],
+    UI.FieldGroup #ProcessStepInfo : {
+        $Type : 'UI.FieldGroupType',
+        Data : [
+            { $Type : 'UI.DataField', Label : 'Business Partner', Value : BusinessPartner },
+            { $Type : 'UI.DataField', Label : 'User',             Value : user },
+            { $Type : 'UI.DataField', Label : 'Action',           Value : action },
+            { $Type : 'UI.DataField', Label : 'Comment',          Value : comment },
+            { $Type : 'UI.DataField', Label : 'Executed',         Value : executed },
+        ],
+    },
+    UI.FieldGroup #BusinessPartnerInfo : {
+        $Type : 'UI.FieldGroupType',
+        Data : [
+            { $Type : 'UI.DataField', Label : 'Business Partner ID', Value : BusinessPartner },
+            { $Type : 'UI.DataField', Label : 'Full Name',           Value : bpFullName },
+            { $Type : 'UI.DataField', Label : 'First Name',          Value : bpFirstName },
+            { $Type : 'UI.DataField', Label : 'Last Name',           Value : bpLastName },
+            { $Type : 'UI.DataField', Label : 'Organization',        Value : bpOrganization },
+            { $Type : 'UI.DataField', Label : 'Category',            Value : bpCategory },
+            { $Type : 'UI.DataField', Label : 'Customer',            Value : bpCustomer },
+            { $Type : 'UI.DataField', Label : 'Supplier',            Value : bpSupplier },
+            { $Type : 'UI.DataField', Label : 'Blocked',             Value : bpIsBlocked },
+        ],
+    },
+    UI.Facets : [
+        {
+            $Type  : 'UI.ReferenceFacet',
+            ID     : 'ProcessStepFacet',
+            Label  : 'Process Step',
+            Target : '@UI.FieldGroup#ProcessStepInfo',
+        },
+        {
+            $Type  : 'UI.ReferenceFacet',
+            ID     : 'BusinessPartnerFacet',
+            Label  : 'Business Partner',
+            Target : '@UI.FieldGroup#BusinessPartnerInfo',
         },
     ],
 );

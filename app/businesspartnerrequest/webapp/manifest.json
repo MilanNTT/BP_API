@@ -85,28 +85,28 @@
       "routes": [
         {
           "pattern": ":?query:",
-          "name": "BusinessPartnerList",
-          "target": "BusinessPartnerList"
+          "name": "ProcessStepList",
+          "target": "ProcessStepList"
         },
         {
-          "pattern": "BusinessPartner({key}):?query:",
-          "name": "BusinessPartnerObjectPage",
-          "target": "BusinessPartnerObjectPage"
+          "pattern": "ProcessStep({key}):?query:",
+          "name": "ProcessStepObjectPage",
+          "target": "ProcessStepObjectPage"
         }
       ],
       "targets": {
-        "BusinessPartnerList": {
+        "ProcessStepList": {
           "type": "Component",
-          "id": "BusinessPartnerList",
+          "id": "ProcessStepList",
           "name": "sap.fe.templates.ListReport",
           "options": {
             "settings": {
-              "contextPath": "/BusinessPartner",
+              "contextPath": "/ProcessStep",
               "variantManagement": "Page",
               "navigation": {
-                "BusinessPartner": {
+                "ProcessStep": {
                   "detail": {
-                    "route": "BusinessPartnerObjectPage"
+                    "route": "ProcessStepObjectPage"
                   }
                 }
               },
@@ -120,14 +120,14 @@
             }
           }
         },
-        "BusinessPartnerObjectPage": {
+        "ProcessStepObjectPage": {
           "type": "Component",
-          "id": "BusinessPartnerObjectPage",
+          "id": "ProcessStepObjectPage",
           "name": "sap.fe.templates.ObjectPage",
           "options": {
             "settings": {
               "editableHeaderContent": false,
-              "contextPath": "/BusinessPartner"
+              "contextPath": "/ProcessStep"
             }
           }
         }
