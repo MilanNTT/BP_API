@@ -17,13 +17,13 @@ module.exports = class EmployeeService extends cds.ApplicationService {
             const bpVirtuals = ['bpFullName','bpFirstName','bpLastName','bpCategory','bpOrganization','bpCustomer','bpSupplier','bpIsBlocked'];
             const needsBp = !sel.columns || sel.columns.some(c => bpVirtuals.includes(c.ref?.[0]));
 
-            // Build a clean DB query — virtual fields don't exist in the DB
-            const dbQuery = SELECT.from('BP_API.ProcessStep');
-            if (sel.where)   dbQuery.SELECT.where   = sel.where;
-            if (sel.orderBy) dbQuery.SELECT.orderBy = sel.orderBy;
-            if (sel.limit)   dbQuery.SELECT.limit   = sel.limit;
+            // Strip virtual columns so the DB query only touches real fields.
+            // Re-use req.query directly to preserve where, one, orderBy, limit, etc.
+            if (sel.columns) {
+                sel.columns = sel.columns.filter(c => !bpVirtuals.includes(c.ref?.[0]));
+            }
 
-            const results = await db.run(dbQuery);
+            const results = await db.run(req.query);
 
             if (needsBp && results) {
                 const items = Array.isArray(results) ? results : [results];
